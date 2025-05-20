@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/lib/animation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import AnimatedSVG from "@/components/ui/animated-svg";
+import { fadeIn, staggerContainer } from "../lib/animation";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import AnimatedSVG from "../components/ui/animated-svg";
 
 type TeamMemberProps = {
   name: string;

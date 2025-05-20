@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/lib/animation";
+import { fadeIn, staggerContainer } from "../lib/animation";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -18,15 +18,15 @@ import {
   Github,
   Youtube,
 } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import AnimatedSVG from "@/components/ui/animated-svg";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import AnimatedSVG from "../components/ui/animated-svg";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../components/ui/form";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
+import { Button } from "../components/ui/button";
+import { useToast } from "../hooks/use-toast";
+import { apiRequest } from "../lib/queryClient";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),

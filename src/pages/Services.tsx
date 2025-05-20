@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/lib/animation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
+import { fadeIn, staggerContainer } from "../lib/animation";
+import Footer from "../components/Footer";
+import { Badge } from "../components/ui/badge";
 import { ArrowRight } from "lucide-react";
+import Navbar from "../components/Navbar";
 
 type ServiceDetailProps = {
   title: string;
