@@ -203,7 +203,7 @@ const Shapes3D = () => {
         position={{ top: "25%", right: "15%" }} 
         delay={1}
       />
-      <AnimatedRing 
+      <AnimatedSphere 
         size="350px" 
         color="rgba(255, 107, 129, 0.15)" 
         position={{ bottom: "10%", right: "5%" }} 

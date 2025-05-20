@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeSwitch from "./ui/theme-switch";
+import logo from "../assets/images/logo.png"  
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,6 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "#why-us", label: "Why Us" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -41,8 +41,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer">
-            <span className="accent-text font-bold text-2xl">XylonMarks</span>
-            <span className="text-white dark:text-white font-light text-xl">Labs</span>
+            <img src={logo} alt="logo" className="w-24" />
           </div>
         </Link>
 
@@ -59,13 +58,6 @@ const Navbar = () => {
 
           <ThemeSwitch />
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="accent-gradient px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
-          >
-            Log In
-          </motion.button>
         </div>
 
         <div className="flex items-center space-x-4 md:hidden">
@@ -89,7 +81,7 @@ const Navbar = () => {
         animate={{ opacity: 1, height: "auto" }}
         exit={{ opacity: 0, height: 0 }}
         transition={{ duration: 0.3 }}
-        className="md:hidden absolute top-full left-0 w-full glass-card py-4 px-4 space-y-3"
+        className="md:hidden absolute top-full right-0 w-1/3 nav-card opacity-5 py-4 px-4 space-y-3"
       >
         {navLinks.map((link) => (
           <a
@@ -101,12 +93,6 @@ const Navbar = () => {
             {link.label}
           </a>
         ))}
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          className="w-full accent-gradient px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
-        >
-          Log In
-        </motion.button>
       </motion.div>
     )}
   </AnimatePresence>
