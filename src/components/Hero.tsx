@@ -28,7 +28,7 @@ const Hero = () => {
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="accent-gradient px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
+                className="accent-gradient text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
               >
                 Contact Us
               </motion.a>
@@ -36,7 +36,7 @@ const Hero = () => {
                 href="/services"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent border border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
+                className="bg-transparent border dark:border-white border-black px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
               >
                 Explore Services
               </motion.a>
@@ -57,7 +57,7 @@ const Hero = () => {
                   <div className="absolute bottom-8 left-1/3 w-72 h-72 bg-pink-300 dark:bg-pink-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
                   
                   {/* 3D Objects */}
-                  <motion.div 
+                  {/* <motion.div 
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40"
                     animate={{ 
                       y: [0, -10, 0], 
@@ -76,7 +76,7 @@ const Hero = () => {
                       opacity={0.9} 
                       position={{}} 
                     />
-                  </motion.div>
+                  </motion.div> */}
                   
                   <motion.div 
                     className="absolute top-[30%] left-[20%] w-16 h-16"
@@ -99,7 +99,7 @@ const Hero = () => {
                     />
                   </motion.div>
                   
-                  <motion.div 
+                  {/* <motion.div 
                     className="absolute bottom-[25%] right-[20%] w-24 h-24"
                     animate={{ 
                       y: [0, 10, 0], 
@@ -119,7 +119,7 @@ const Hero = () => {
                       opacity={0.7} 
                       position={{}} 
                     />
-                  </motion.div>
+                  </motion.div> */}
                   
                   {/* Tech icons around the 3D objects */}
                   <motion.div 

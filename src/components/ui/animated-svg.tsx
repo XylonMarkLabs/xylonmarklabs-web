@@ -70,7 +70,7 @@ export const AnimatedSVG = () => {
           }}
         />
 
-        <motion.ellipse
+        {/* <motion.ellipse
           cx="350"
           cy="600"
           rx="150"
@@ -88,10 +88,10 @@ export const AnimatedSVG = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-        />
+        /> */}
 
         <motion.path
-          d="M800,550 Q950,450 900,650 T800,550"
+          d="M800,550 L900,650 M900,550 L800,650"
           stroke="#FF3366"
           strokeWidth="5"
           fill="none"
@@ -111,7 +111,7 @@ export const AnimatedSVG = () => {
         />
 
         {/* 3D Cube */}
-        <g filter="url(#glow)">
+        {/* <g filter="url(#glow)">
           <motion.polygon
             points="600,400 650,430 650,510 600,540 550,510 550,430"
             fill="url(#gradient1)"
@@ -130,7 +130,7 @@ export const AnimatedSVG = () => {
               ease: "easeInOut",
             }}
           />
-        </g>
+        </g> */}
       </svg>
     </div>
   );
