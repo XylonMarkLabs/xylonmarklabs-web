@@ -131,7 +131,7 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Code size={24} className="text-white" />
+                    <Code size={38} className="text-white" />
                   </motion.div>
                   
                   <motion.div 
@@ -143,7 +143,7 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Server size={24} className="text-white" />
+                    <Server size={36} className="text-white" />
                   </motion.div>
                   
                   <motion.div 
@@ -155,7 +155,7 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Database size={24} className="text-white" />
+                    <Database size={36} className="text-white" />
                   </motion.div>
 
                   <motion.div 
@@ -167,7 +167,7 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Cloud size={24} className="text-white" />
+                    <Cloud size={36} className="text-white" />
                   </motion.div>
                   
                   <motion.div 
@@ -179,23 +179,23 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Globe size={24} className="text-white" />
+                    <Globe size={36} className="text-white" />
                   </motion.div>
                   
                   <motion.div 
-                    className="absolute bottom-[15%] right-[30%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute bottom-[15%] right-[10%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: 20 }}
-                    animate={{ y: [0, 7, 0] }}
+                    animate={{ y: [0, 10, 3] }}
                     transition={{ 
                       y: { repeat: Infinity, duration: 4, ease: "easeInOut", delay: 2 },
                       default: { duration: 0.3 }
                     }}
                   >
-                    <Cpu size={24} className="text-white" />
+                    <Cpu size={36} className="text-white" />
                   </motion.div>
                   
                   <motion.div 
-                    className="absolute bottom-[45%] left-[40%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute bottom-[50%] left-[40%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: -20 }}
                     animate={{ y: [0, -5, 0] }}
                     transition={{ 
@@ -203,11 +203,11 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <ShieldCheck size={24} className="text-white" />
+                    <ShieldCheck size={36} className="text-white" />
                   </motion.div>
 
                   <motion.div 
-                    className="absolute bottom-[40%] left-[60%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute bottom-[30%] left-[60%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: -20 }}
                     animate={{ y: [0, -5, 0] }}
                     transition={{ 
@@ -215,7 +215,7 @@ const Hero = () => {
                       default: { duration: 0.3 }
                     }}
                   >
-                    <MonitorSmartphone size={24} className="text-white" />
+                    <MonitorSmartphone size={36} className="text-white" />
                   </motion.div>
                 </div>
               </div>

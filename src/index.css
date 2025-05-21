@@ -152,4 +152,14 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-[hsl(var(--accent-red))];
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 }

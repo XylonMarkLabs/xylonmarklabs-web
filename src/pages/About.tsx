@@ -79,17 +79,17 @@ const ValueCard = ({ title, description, icon, index }: ValueCardProps) => {
 const AboutPage = () => {
   const teamMembers = [
     {
-      name: "Alex Morgan",
+      name: "Chandupa Ranawaka",
       role: "Founder & CEO",
       description: "With over 15 years of experience in tech, Alex founded XylonMark Labs with a vision to help businesses transform digitally through innovative solutions."
     },
     {
-      name: "Sarah Chen",
+      name: "Kavija Sapukotana",
       role: "CTO",
       description: "Sarah leads our technical team with expertise in software architecture, cloud infrastructure, and emerging technologies. She ensures our solutions are cutting-edge."
     },
     {
-      name: "Michael Rodriguez",
+      name: "Nethmi Liyanage",
       role: "Creative Director",
       description: "Michael brings visual excellence to our projects, focusing on creating intuitive user interfaces and engaging user experiences that delight customers."
     },
@@ -107,6 +107,11 @@ const AboutPage = () => {
       name: "Lisa Johnson",
       role: "UX Researcher",
       description: "Lisa applies her background in psychology and design to understand user needs and behaviors, creating product experiences that truly connect with users."
+    },
+    {
+      name: "Thilina Dilshan",
+      role: "Tea Boy",
+      description: "Thilina is the heart of our office, ensuring everyone stays energized and focused. His positive attitude and dedication to service make him an invaluable part of our team."
     }
   ];
 
@@ -275,7 +280,7 @@ const AboutPage = () => {
           </motion.div>
 
           {/* Our Team Section */}
-          <motion.div
+          {/* <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
@@ -306,7 +311,7 @@ const AboutPage = () => {
                 />
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* Our Mission Section */}
           <motion.div
