@@ -48,8 +48,8 @@ const Navbar = () => {
               <a
                 className={`block px-3 py-1 rounded-full transition-colors duration-200 font-medium ${
                   location === link.href
-                    ? "bg-[#82181a] text-white"
-                    : "text-slate-700 dark:text-white hover:bg-[#9f0712] hover:text-white"
+                    ? "text-[#9f0712] "
+                    : "text-slate-700 dark:text-white hover:underline hover:text-white"
                 }`}
               >
                 {link.label}
