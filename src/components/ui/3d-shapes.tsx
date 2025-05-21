@@ -188,24 +188,24 @@ const Shapes3D = () => {
     <div className="shapes-container fixed inset-0 overflow-hidden -z-10 pointer-events-none">
       <AnimatedSphere 
         size="250px" 
-        color="rgba(255, 51, 102, 0.3)" 
-        position={{ top: "15%", left: "5%" }} 
+        color="rgba(163, 41, 41, 0.5)" 
+        position={{ top: "25%", left: "5%" }} 
       />
       <AnimatedSphere 
         size="180px" 
-        color="rgba(255, 107, 129, 0.25)" 
+        color="rgba(163, 41, 41, 0.4)" 
         position={{ top: "60%", left: "20%" }} 
         delay={2}
       />
       <AnimatedCube 
         size="120px" 
-        color="rgba(255, 51, 102, 0.2)" 
+        color="rgba(163, 41, 41, 0.2)" 
         position={{ top: "25%", right: "15%" }} 
         delay={1}
       />
       <AnimatedSphere 
         size="350px" 
-        color="rgba(255, 107, 129, 0.15)" 
+        color="rgba(163, 41, 41, 0.2)" 
         position={{ bottom: "10%", right: "5%" }} 
         delay={0.5}
       />

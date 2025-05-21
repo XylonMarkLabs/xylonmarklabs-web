@@ -149,8 +149,8 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - XylonMarks Labs</title>
-        <meta name="description" content="Get in touch with XylonMarks Labs. We're here to answer your questions and help with your technology needs. Contact us via phone, email, or our convenient contact form." />
+        <title>Contact Us - XylonMark Labs</title>
+        <meta name="description" content="Get in touch with XylonMark Labs. We're here to answer your questions and help with your technology needs. Contact us via phone, email, or our convenient contact form." />
       </Helmet>
 
       <AnimatedSVG />
@@ -454,7 +454,7 @@ const ContactPage = () => {
                   >
                     <circle cx="500" cy="250" r="15" fill="#FF3366" />
                     <circle cx="500" cy="250" r="7" fill="#fff" />
-                    <text x="530" y="255" fill="currentColor" className="text-slate-900 dark:text-white font-bold">XylonMarks Labs HQ</text>
+                    <text x="530" y="255" fill="currentColor" className="text-slate-900 dark:text-white font-bold">XylonMark Labs HQ</text>
                   </motion.g>
                   
                   {/* Buildings */}

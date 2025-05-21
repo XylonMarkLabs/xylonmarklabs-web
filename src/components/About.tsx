@@ -81,12 +81,12 @@ const About = () => {
             <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 About
-                <span className="accent-text"> XylonMarks</span>
+                <span className="accent-text"> XylonMark</span>
                 <span className="block">Labs</span>
               </h2>
 
               <p className="text-gray-300 mb-6">
-                At XylonMarks Labs, we harness the power of technology to build solutions that aren't just functional but exceptional. Our expert team combines technical proficiency with creative thinking to develop software that addresses real-world challenges. We approach every project with a deep commitment to quality, innovation, and client satisfaction.
+                At XylonMark Labs, we harness the power of technology to build solutions that aren't just functional but exceptional. Our expert team combines technical proficiency with creative thinking to develop software that addresses real-world challenges. We approach every project with a deep commitment to quality, innovation, and client satisfaction.
               </p>
 
               <p className="text-gray-300">

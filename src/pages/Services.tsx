@@ -157,7 +157,7 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services - XylonMarks Labs</title>
+        <title>Our Services - XylonMark Labs</title>
         <meta name="description" content="Explore our comprehensive range of tech services including Web Development, Mobile Apps, ERP Implementation, AI Solutions, and Cloud Services. We use cutting-edge technologies to deliver exceptional solutions." />
       </Helmet>
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../lib/animation";
 import { AnimatedCube, AnimatedSphere, AnimatedRing } from "../components/ui/3d-shapes";
-import { Code, Server, Database, Globe, Cpu, ShieldCheck } from "lucide-react";
+import { Code, Server, Database, Globe, Cpu, ShieldCheck, MonitorSmartphone, Cloud } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
             </h1>
 
             <p className="mt-6 text-gray-300 text-lg md:text-xl max-w-xl">
-              At XylonMarks Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
+              At XylonMark Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -157,6 +157,18 @@ const Hero = () => {
                   >
                     <Database size={24} className="text-white" />
                   </motion.div>
+
+                  <motion.div 
+                    className="absolute top-[23%] left-[27%] p-3 rounded-full accent-gradient shadow-lg"
+                    whileHover={{ scale: 1.2, rotate: 20 }}
+                    animate={{ y: [0, 5, 0] }}
+                    transition={{ 
+                      y: { repeat: Infinity, duration: 2.5, ease: "easeInOut", delay: 0.5 },
+                      default: { duration: 0.3 }
+                    }}
+                  >
+                    <Cloud size={24} className="text-white" />
+                  </motion.div>
                   
                   <motion.div 
                     className="absolute top-[30%] right-[15%] p-3 rounded-full accent-gradient shadow-lg"
@@ -183,7 +195,7 @@ const Hero = () => {
                   </motion.div>
                   
                   <motion.div 
-                    className="absolute bottom-[40%] left-[35%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute bottom-[45%] left-[40%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: -20 }}
                     animate={{ y: [0, -5, 0] }}
                     transition={{ 
@@ -192,6 +204,18 @@ const Hero = () => {
                     }}
                   >
                     <ShieldCheck size={24} className="text-white" />
+                  </motion.div>
+
+                  <motion.div 
+                    className="absolute bottom-[40%] left-[60%] p-3 rounded-full accent-gradient shadow-lg"
+                    whileHover={{ scale: 1.2, rotate: -20 }}
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ 
+                      y: { repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.7 },
+                      default: { duration: 0.3 }
+                    }}
+                  >
+                    <MonitorSmartphone size={24} className="text-white" />
                   </motion.div>
                 </div>
               </div>
