@@ -103,7 +103,7 @@ const About = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-full h-full max-w-md">
                     {/* Decorative elements */}
-                    <div className="absolute top-0 right-1/4 w-60 h-60 bg-blue-300 dark:bg-[#A32929] rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
+                    <div className="absolute top-0 right-1/4 w-60 h-60 bg-[#A32929] dark:bg-[#A32929] rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
                     {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse animation-delay-2000"></div> */}
 
                     {/* Connected nodes visualization */}
