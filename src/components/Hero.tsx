@@ -11,7 +11,7 @@ const Hero = () => {
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center md:items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
         >
           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -45,7 +45,7 @@ const Hero = () => {
 
           <motion.div
             variants={fadeIn("left", "tween", 0.4, 1)}
-            className="relative h-[400px] md:hidden"
+            className="relative h-[400px]"
           >
             <div className="w-full h-full relative">
               {/* 3D Interactive Visual */}
