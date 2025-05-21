@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter"; // import useLocation
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeSwitch from "./ui/theme-switch";
-import logo from "../assets/images/logo.png"  
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation(); // get current route
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -47,22 +44,26 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-slate-700 dark:text-white hover:text-[#FF6B81] transition-colors"
-            >
-              {link.label}
-            </a>
+            <Link href={link.href} key={link.href}>
+              <a
+                className={`block px-3 py-1 rounded-full transition-colors duration-200 font-medium ${
+                  location === link.href
+                    ? "bg-[#82181a] text-white"
+                    : "text-slate-700 dark:text-white hover:bg-[#9f0712] hover:text-white"
+                }`}
+              >
+                {link.label}
+              </a>
+            </Link>
+
           ))}
 
           <ThemeSwitch />
-
         </div>
 
         <div className="flex items-center space-x-4 md:hidden">
           <ThemeSwitch />
-          
+
           <button
             onClick={toggleMenu}
             className="text-slate-700 dark:text-white focus:outline-none"
@@ -73,31 +74,33 @@ const Navbar = () => {
         </div>
       </div>
 
-      <>
-  <AnimatePresence>
-    {isOpen && (
-      <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: 1, height: "auto" }}
-        exit={{ opacity: 0, height: 0 }}
-        transition={{ duration: 0.3 }}
-        className="md:hidden absolute top-full right-0 w-1/3 nav-card opacity-5 py-4 px-4 space-y-3"
-      >
-        {navLinks.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={closeMenu}
-            className="block text-slate-700 dark:text-white hover:text-[#FF6B81] py-2 transition-colors"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden absolute top-full right-0 w-1/4 nav-card py-4 px-4 space-y-3 bg-white dark:bg-zinc-900 shadow-lg justify-center rounded-lg"
           >
-            {link.label}
-          </a>
-        ))}
-      </motion.div>
-    )}
-  </AnimatePresence>
-</>
+            {navLinks.map((link) => (
+              <Link href={link.href} key={link.href}>
+                <a
+                  onClick={closeMenu}
+                  className={`block px-2 py-1 my-1 rounded-full transition-colors font-medium ${
+                    location === link.href
+                      ? "bg-[#82181a] text-white text-center"
+                      : "text-slate-700 dark:text-white hover:bg-[#9f0712] hover:shadow-lg hover:text-white text-center"
+                  }`}
+                >
+                  {link.label}
+                </a>
 
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

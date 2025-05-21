@@ -35,9 +35,9 @@ export const ThemeSwitch = () => {
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
-        <Sun className="h-5 w-5 text-yellow-400" />
+        <Sun className="h-5 w-5 text-[#ff2d3b]" />
       ) : (
-        <Moon className="h-5 w-5 text-slate-700" />
+        <Moon className="h-5 w-5 text-[#631015]" />
       )}
     </motion.button>
   );
