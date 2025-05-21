@@ -12,7 +12,7 @@ export const AnimatedSVG = () => {
         {/* Gradient definitions */}
         <defs>
           <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#FF3366" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#A32929" stopOpacity="0.3" />
             <stop offset="100%" stopColor="#FF6B81" stopOpacity="0.1" />
           </linearGradient>
           <linearGradient id="gradient2" x1="100%" y1="0%" x2="0%" y2="100%">
@@ -92,7 +92,7 @@ export const AnimatedSVG = () => {
 
         <motion.path
           d="M800,550 L900,650 M900,550 L800,650"
-          stroke="#FF3366"
+          stroke="#F46E6E"
           strokeWidth="5"
           fill="none"
           strokeOpacity="0.3"

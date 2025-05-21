@@ -81,7 +81,7 @@ const AboutPage = () => {
     {
       name: "Alex Morgan",
       role: "Founder & CEO",
-      description: "With over 15 years of experience in tech, Alex founded XylonMarks Labs with a vision to help businesses transform digitally through innovative solutions."
+      description: "With over 15 years of experience in tech, Alex founded XylonMark Labs with a vision to help businesses transform digitally through innovative solutions."
     },
     {
       name: "Sarah Chen",
@@ -156,8 +156,8 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - XylonMarks Labs</title>
-        <meta name="description" content="Learn about XylonMarks Labs, our mission, values, and the talented team behind our innovative technology solutions. We're dedicated to helping businesses succeed through digital transformation." />
+        <title>About Us - XylonMark Labs</title>
+        <meta name="description" content="Learn about XylonMark Labs, our mission, values, and the talented team behind our innovative technology solutions. We're dedicated to helping businesses succeed through digital transformation." />
       </Helmet>
 
       <AnimatedSVG />
@@ -176,7 +176,7 @@ const AboutPage = () => {
               variants={fadeIn("up", "tween", 0.2, 1)}
               className="text-4xl md:text-5xl font-bold text-center mb-6"
             >
-              About <span className="accent-text">XylonMarks</span> Labs
+              About <span className="accent-text">XylonMark</span> Labs
             </motion.h1>
             <motion.p
               variants={fadeIn("up", "tween", 0.4, 1)}
@@ -199,7 +199,7 @@ const AboutPage = () => {
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="space-y-4 text-slate-700 dark:text-gray-300">
                   <p>
-                    Founded in 2018, XylonMarks Labs began with a simple mission: to help businesses leverage technology to achieve their full potential. What started as a small team of developers has grown into a full-service tech company with expertise across multiple domains.
+                    Founded in 2018, XylonMark Labs began with a simple mission: to help businesses leverage technology to achieve their full potential. What started as a small team of developers has grown into a full-service tech company with expertise across multiple domains.
                   </p>
                   <p>
                     Our journey has been defined by a commitment to innovation, quality, and client satisfaction. We've worked with companies of all sizes, from startups to enterprises, delivering solutions that drive growth and create competitive advantages.

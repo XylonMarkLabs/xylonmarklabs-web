@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link href="/">
               <div className="flex items-center space-x-2 mb-4 cursor-pointer">
-                <span className="accent-text font-bold text-2xl">XylonMarks</span>
+                <span className="accent-text font-bold text-2xl">XylonMark</span>
                 <span className="text-white font-light text-xl">Labs</span>
               </div>
             </Link>
@@ -52,27 +52,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/about" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/services" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Services
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#why-us" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Why Us
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/contact" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Contact
                 </a>
               </li>
@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} XylonMarks Labs. All rights reserved.</p>
+          <p className="text-gray-400">© {new Date().getFullYear()} XylonMark Labs. All rights reserved.</p>
         </div>
       </div>
     </footer>

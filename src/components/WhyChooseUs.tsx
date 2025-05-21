@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
             <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Why choose
-                <span className="accent-text"> XylonMarks</span>
+                <span className="accent-text"> XylonMark</span>
                 <span className="block">Labs</span>
               </h2>
 

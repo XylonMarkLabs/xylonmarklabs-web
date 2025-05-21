@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>XylonMarks Labs - From Strategy to Software</title>
-        <meta name="description" content="XylonMarks Labs - We blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions." />
+        <title>XylonMark Labs - From Strategy to Software</title>
+        <meta name="description" content="XylonMark Labs - We blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions." />
       </Helmet>
       
       <Shapes3D />
