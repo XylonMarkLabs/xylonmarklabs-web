@@ -6,6 +6,9 @@ import { Badge } from "../components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 
+import webdevices from "../assets/services/web-devices.svg";
+import mobiledev from "../assets/services/mobile-dev.svg";
+
 type ServiceDetailProps = {
   title: string;
   description: string;
@@ -70,72 +73,10 @@ const ServiceDetail = ({
           variants={fadeIn(reverse ? "right" : "left", "tween", 0.4, 1)}
           className="glass-card rounded-xl p-8 flex items-center justify-center h-[400px]"
         >
-          <svg
-            className="w-full h-full"
-            viewBox="0 0 300 300"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id={`gradient-${title}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#FF3366" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#FF6B81" stopOpacity="0.1" />
-              </linearGradient>
-              <filter id={`shadow-${title}`}>
-                <feDropShadow dx="0" dy="5" stdDeviation="5" floodColor="#FF3366" floodOpacity="0.3" />
-              </filter>
-            </defs>
-            {imageSrc === "web" && (
-              <>
-                <rect x="50" y="50" width="200" height="150" rx="10" fill="url(#gradient-web)" filter="url(#shadow-web)" />
-                <rect x="70" y="70" width="160" height="20" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="70" y="100" width="160" height="80" rx="5" fill="#FF3366" fillOpacity="0.1" />
-                <circle cx="85" cy="210" r="10" fill="#FF3366" fillOpacity="0.2" />
-                <circle cx="115" cy="210" r="10" fill="#FF3366" fillOpacity="0.2" />
-                <circle cx="145" cy="210" r="10" fill="#FF3366" fillOpacity="0.2" />
-              </>
-            )}
-            {imageSrc === "mobile" && (
-              <>
-                <rect x="120" y="50" width="80" height="170" rx="10" fill="url(#gradient-mobile)" filter="url(#shadow-mobile)" />
-                <rect x="130" y="70" width="60" height="100" rx="2" fill="#FF3366" fillOpacity="0.1" />
-                <circle cx="160" cy="190" r="15" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="145" y="60" width="30" height="5" rx="2" fill="#FF3366" fillOpacity="0.2" />
-              </>
-            )}
-            {imageSrc === "erp" && (
-              <>
-                <rect x="30" y="70" width="240" height="140" rx="10" fill="url(#gradient-erp)" filter="url(#shadow-erp)" />
-                <rect x="50" y="90" width="80" height="40" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="140" y="90" width="100" height="40" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="50" y="140" width="190" height="50" rx="5" fill="#FF3366" fillOpacity="0.1" />
-                <line x1="50" y1="230" x2="250" y2="230" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-              </>
-            )}
-            {imageSrc === "ai" && (
-              <>
-                <path d="M150,50 L230,100 L230,180 L150,230 L70,180 L70,100 Z" fill="url(#gradient-ai)" filter="url(#shadow-ai)" />
-                <circle cx="150" cy="140" r="30" fill="#FF3366" fillOpacity="0.2" />
-                <line x1="150" y1="50" x2="150" y2="110" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="230" y1="100" x2="180" y2="140" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="230" y1="180" x2="180" y2="140" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="150" y1="230" x2="150" y2="170" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="70" y1="180" x2="120" y2="140" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="70" y1="100" x2="120" y2="140" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-              </>
-            )}
-            {imageSrc === "cloud" && (
-              <>
-                <path d="M100,150 C70,150 50,130 50,100 C50,70 70,50 100,50 C110,30 140,20 170,40 C200,10 260,30 250,90 C280,90 290,130 270,150 Z" 
-                  fill="url(#gradient-cloud)" filter="url(#shadow-cloud)" />
-                <rect x="90" y="180" width="40" height="40" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="140" y="180" width="40" height="40" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <rect x="190" y="180" width="40" height="40" rx="5" fill="#FF3366" fillOpacity="0.2" />
-                <line x1="110" y1="150" x2="110" y2="180" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="160" y1="150" x2="160" y2="180" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-                <line x1="210" y1="150" x2="210" y2="180" stroke="#FF3366" strokeOpacity="0.3" strokeWidth="2" />
-              </>
-            )}
-          </svg>
+          <img
+        src={imageSrc}
+        className="rounded-xl mb-6 w-full h-48 object-contain"
+      />
         </motion.div>
       </div>
     </motion.div>
@@ -155,7 +96,7 @@ const ServicesPage = () => {
         "Secure and scalable architecture",
         "Integration with third-party services and APIs"
       ],
-      imageSrc: "web"
+      imageSrc: webdevices
     },
     {
       title: "Mobile App Development",
@@ -168,7 +109,7 @@ const ServicesPage = () => {
         "Integration with device features (camera, GPS, etc.)",
         "Performance optimization for various devices"
       ],
-      imageSrc: "mobile",
+      imageSrc: mobiledev,
       reverse: true
     },
     {
