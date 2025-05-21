@@ -45,7 +45,7 @@ const Hero = () => {
 
           <motion.div
             variants={fadeIn("left", "tween", 0.4, 1)}
-            className="relative h-[400px]"
+            className="relative h-[400px] hidden md:block"
           >
             <div className="w-full h-full relative">
               {/* 3D Interactive Visual */}
