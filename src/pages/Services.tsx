@@ -91,7 +91,7 @@ const ServicesPage = () => {
     {
       title: "Web Development",
       description: "We build custom web applications that are scalable, responsive, and user-friendly. Our web development solutions are designed to provide excellent user experiences while ensuring high performance and security. From simple corporate websites to complex web applications, our team of skilled developers will bring your vision to life.",
-      technologies: ["React", "Next.js", "Vue.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL", "Tailwind CSS", "AWS", "Firebase"],
+      technologies: ["React", "Next.js", "Node.js", "Express","Spring Boot", "MongoDB", "PostgreSQL", "GraphQL", "Tailwind CSS", "AWS", "Firebase"],
       benefits: [
         "Responsive design that works on all devices",
         "Search engine optimized codebase",
@@ -104,7 +104,7 @@ const ServicesPage = () => {
     {
       title: "Mobile App Development",
       description: "Our mobile app development services cover both iOS and Android platforms, allowing you to reach a wider audience. We focus on creating intuitive, feature-rich mobile applications that provide value to your users while aligning with your business goals. Our development process ensures your app is not only functional but also maintainable and future-proof.",
-      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux", "GraphQL", "REST APIs", "Push Notifications", "OAuth"],
+      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux", "GraphQL", "REST APIs", "OAuth"],
       benefits: [
         "Cross-platform compatibility",
         "Intuitive user interface and experience",
