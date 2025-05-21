@@ -11,7 +11,7 @@ const Hero = () => {
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center md:items-center"
         >
           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -23,12 +23,12 @@ const Hero = () => {
               At XylonMark Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap gap-4 w-full">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="accent-gradient text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
+                className="accent-gradient text-white text-center px-8 py-3 w-1/3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
               >
                 Contact Us
               </motion.a>
@@ -36,7 +36,7 @@ const Hero = () => {
                 href="/services"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent border dark:border-white border-black px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
+                className="bg-transparent border dark:border-white text-center border-black px-8 py-3 w-1/3 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
               >
                 Explore Services
               </motion.a>
@@ -45,7 +45,7 @@ const Hero = () => {
 
           <motion.div
             variants={fadeIn("left", "tween", 0.4, 1)}
-            className="relative h-[400px]"
+            className="relative h-[400px] md:hidden"
           >
             <div className="w-full h-full relative">
               {/* 3D Interactive Visual */}

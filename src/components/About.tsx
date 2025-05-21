@@ -5,12 +5,12 @@ import SectionWrapper from "./ui/section-wrapper";
 import { Box, Layers, Code2, Braces, PackageCheck, LineChart } from "lucide-react";
 import { AnimatedCube, AnimatedSphere } from "../components/ui/3d-shapes";
 
-const FeatureBox = ({ 
-  icon, 
-  title, 
-  description, 
-  delay = 0 
-}: { 
+const FeatureBox = ({
+  icon,
+  title,
+  description,
+  delay = 0
+}: {
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -78,11 +78,11 @@ const About = () => {
           className="glass-card rounded-3xl p-8 md:p-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
+            <motion.div variants={fadeIn("right", "tween", 0.2, 1)} className="md:text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 About
                 <span className="accent-text"> XylonMark</span>
-                <span className="block">Labs</span>
+                <span className="block md:inline-block md:px-2">Labs</span>
               </h2>
 
               <p className="text-gray-300 mb-6">
@@ -96,24 +96,24 @@ const About = () => {
 
             <motion.div
               variants={fadeIn("left", "tween", 0.4, 1)}
-              className="relative h-[300px]"
+              className="relative h-[300px] md:hidden"
             >
               <div className="w-full h-full relative">
                 {/* 3D Interactive Visual for About Section */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-full h-full max-w-md">
                     {/* Decorative elements */}
-                    <div className="absolute top-0 right-1/4 w-60 h-60 bg-blue-300 dark:bg-blue-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
-                    <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse animation-delay-2000"></div>
-                    
+                    <div className="absolute top-0 right-1/4 w-60 h-60 bg-blue-300 dark:bg-[#A32929] rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse"></div>
+                    {/* <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-purple-300 dark:bg-purple-900 rounded-full mix-blend-multiply dark:mix-blend-soft-light filter blur-3xl opacity-30 animate-pulse animation-delay-2000"></div> */}
+
                     {/* Connected nodes visualization */}
-                    <svg 
+                    {/* <svg 
                       className="absolute inset-0 w-full h-full" 
                       viewBox="0 0 400 300" 
                       xmlns="http://www.w3.org/2000/svg"
-                    >
-                      {/* Connection lines */}
-                      <g className="connections">
+                    > */}
+                    {/* Connection lines */}
+                    {/* <g className="connections">
                         <motion.path 
                           d="M 200,150 L 80,80" 
                           stroke="url(#line-gradient)" 
@@ -167,30 +167,30 @@ const About = () => {
                           initial={{ pathLength: 0, opacity: 0 }}
                           animate={{ pathLength: 1, opacity: 0.6 }}
                           transition={{ duration: 1.5, delay: 1.2 }}
-                        />
-                        
-                        {/* Gradient for lines */}
-                        <defs>
+                        /> */}
+
+                    {/* Gradient for lines */}
+                    {/* <defs>
                           <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stopColor="#FF3366" stopOpacity="0.8" />
                             <stop offset="100%" stopColor="#FF6B81" stopOpacity="0.6" />
                           </linearGradient>
                         </defs>
-                      </g>
-                      
-                      {/* Node points */}
-                      <g className="nodes">
-                        {/* Center node */}
-                        <motion.circle 
+                      </g> */}
+
+                    {/* Node points */}
+                    {/* <g className="nodes"> */}
+                    {/* Center node */}
+                    {/* <motion.circle 
                           cx="200" cy="150" r="15" 
                           fill="#FF3366"
                           initial={{ scale: 0, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
                           transition={{ duration: 0.8 }}
-                        />
-                        
-                        {/* Outer nodes */}
-                        <motion.circle 
+                        /> */}
+
+                    {/* Outer nodes */}
+                    {/* <motion.circle 
                           cx="80" cy="80" r="12" 
                           fill="#4C6EF5"
                           initial={{ scale: 0, opacity: 0 }}
@@ -233,8 +233,19 @@ const About = () => {
                           transition={{ duration: 0.8, delay: 1.2 }}
                         />
                       </g>
-                    </svg>
-                    
+                    </svg> */}
+
+                    <motion.div
+                      variants={fadeIn("left", "tween", 0.4, 1)}
+                      className="relative h-[300px]"
+                    >
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <img src={require('../assets/images/icon-noBack.png')} alt="Company Logo" />
+                      </div>
+                    </motion.div>
+
+
+
                     {/* Floating 3D elements */}
                     <motion.div
                       className="absolute top-10 left-[15%]"
@@ -250,7 +261,7 @@ const About = () => {
                     >
                       <AnimatedCube size="40px" color="#FF3366" opacity={0.7} position={{}} />
                     </motion.div>
-                    
+
                     <motion.div
                       className="absolute bottom-10 right-[15%]"
                       animate={{
@@ -264,14 +275,14 @@ const About = () => {
                         delay: 1
                       }}
                     >
-                      <AnimatedSphere size="40px" color="#4C6EF5" opacity={0.7} position={{}} />
+                      <AnimatedSphere size="40px" color="#A32929" opacity={0.7} position={{}} />
                     </motion.div>
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
-          
+
           {/* Feature grid */}
           {/* <motion.div 
             variants={staggerContainer}
