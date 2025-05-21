@@ -483,7 +483,7 @@ const ContactPage = () => {
             </motion.h2>
             <motion.p
               variants={fadeIn("up", "tween", 0.4, 1)}
-              className="text-lg text-slate-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+              className="text-lg text-slate-698 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               We're here to help and answer any questions you might have. We look forward to hearing from you!
             </motion.p>
@@ -493,14 +493,14 @@ const ContactPage = () => {
             >
               <a
                 href="tel:+14155550123"
-                className="inline-flex items-center gap-2 accent-gradient px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 accent-gradient px-16 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
               >
                 <Phone size={18} className="text-white" />
                 Call Us
               </a>
               <a
                 href="mailto:contact@xylonmarkslabs.com"
-                className="inline-flex items-center gap-2 bg-transparent border border-primary dark:border-white px-6 py-2 rounded-full font-semibold hover:bg-primary/10 transition-colors"
+                className="inline-flex items-center gap-2 bg-transparent border border-primary dark:border-white px-16 py-2 rounded-full font-semibold hover:bg-primary/10 transition-colors"
               >
                 <Mail size={18} />
                 Email Us
