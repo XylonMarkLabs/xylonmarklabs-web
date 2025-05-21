@@ -78,11 +78,11 @@ const About = () => {
           className="glass-card rounded-3xl p-8 md:p-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <motion.div variants={fadeIn("right", "tween", 0.2, 1)} className="md:text-center">
+            <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 About
                 <span className="accent-text"> XylonMark</span>
-                <span className="block md:inline-block md:px-2">Labs</span>
+                <span className="block">Labs</span>
               </h2>
 
               <p className="text-gray-300 mb-6">
@@ -96,7 +96,7 @@ const About = () => {
 
             <motion.div
               variants={fadeIn("left", "tween", 0.4, 1)}
-              className="relative h-[300px] md:hidden"
+              className="relative h-[300px]"
             >
               <div className="w-full h-full relative">
                 {/* 3D Interactive Visual for About Section */}
