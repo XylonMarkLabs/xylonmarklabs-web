@@ -8,6 +8,9 @@ import Navbar from "../components/Navbar";
 
 import webdevices from "../assets/services/web-devices.svg";
 import mobiledev from "../assets/services/mobile-dev.svg";
+import erp from "../assets/services/erp.svg";
+import digitalmarketing from "../assets/services/digital.svg";
+import uiux from "../assets/services/design.svg";
 
 type ServiceDetailProps = {
   title: string;
@@ -58,7 +61,7 @@ const ServiceDetail = ({
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-4">Technologies We Use</h3>
+            {/* <h3 className="text-xl font-semibold mb-4">Technologies We Use</h3> */}
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <Badge key={index} variant="outline" className="px-3 py-1 bg-slate-100 dark:bg-slate-800 border-slate-200 dark:border-slate-700">
@@ -123,34 +126,34 @@ const ServicesPage = () => {
         "Improved productivity and efficiency",
         "Scalability to accommodate business growth"
       ],
-      imageSrc: "erp"
+      imageSrc: erp
     },
     {
-      title: "AI and Machine Learning",
-      description: "Harness the power of artificial intelligence and machine learning to gain competitive advantage. Our AI solutions range from predictive analytics and natural language processing to computer vision and recommendation systems. We help businesses leverage their data to derive meaningful insights and automate decision-making processes.",
-      technologies: ["TensorFlow", "PyTorch", "Scikit-learn", "Natural Language Processing", "Computer Vision", "Deep Learning", "Reinforcement Learning", "Big Data", "Cloud ML Services"],
+      title: "Digital Marketing & Branding",
+      description: "We offer comprehensive digital marketing and branding services to help you establish a strong online presence. From SEO and content marketing to social media management and PPC advertising, our team will work with you to create a tailored strategy that aligns with your business goals and drives results.",
+      technologies: ["SEO", "PPC", "Social Media", "Content Marketing", "Email Marketing", "Analytics", "Brand Strategy", "Graphic Design"],
       benefits: [
-        "Data-driven decision making",
-        "Predictive analytics for business forecasting",
-        "Automated processes and reduced manual work",
-        "Customer behavior analysis and personalization",
-        "Real-time data processing and insights"
+        "Increased online visibility and brand awareness",
+        "Targeted marketing campaigns to reach your audience",
+        "Data-driven strategies for better ROI",
+        "Creative content that resonates with your audience",
+        "Ongoing analysis and optimization of marketing efforts"
       ],
-      imageSrc: "ai",
+      imageSrc: digitalmarketing,
       reverse: true
     },
     {
-      title: "Cloud Services & DevOps",
-      description: "Our cloud services and DevOps solutions help businesses modernize their infrastructure, improve scalability, and optimize costs. We provide end-to-end cloud migration, infrastructure management, and CI/CD implementation services. Our DevOps practices ensure faster development cycles, improved collaboration, and reliable deployments.",
-      technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Jenkins", "GitHub Actions", "CircleCI", "Prometheus", "Grafana"],
+      title: "UI/UX Design",
+      description: "Our UI/UX design services focus on creating user-centered designs that enhance the overall user experience. We conduct thorough research and testing to ensure our designs are not only visually appealing but also functional and intuitive. Our goal is to create designs that engage users and drive conversions.",
+      technologies: ["Figma", "User Research", "Wireframing", "Prototyping", "Usability Testing"],
       benefits: [
-        "Scalable and resilient infrastructure",
-        "Automated deployment and testing processes",
-        "Reduced operational costs and improved efficiency",
-        "Enhanced security and compliance",
-        "24/7 monitoring and quick issue resolution"
+        "User-centered design approach",
+        "Intuitive navigation and layout",
+        "High-fidelity prototypes for testing",
+        "Brand-consistent visual design",
+        "Accessibility considerations in design"
       ],
-      imageSrc: "cloud"
+      imageSrc: uiux
     }
   ];
 

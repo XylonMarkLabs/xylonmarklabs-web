@@ -1,67 +1,107 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import { fadeIn, staggerContainer } from "../lib/animation";
 import SectionWrapper from "./ui/section-wrapper";
 import { ServiceItem } from "../lib/types";
 
 import webdevices from "../assets/services/web-devices.svg";
 import mobiledev from "../assets/services/mobile-dev.svg";
+import erp from "../assets/services/erp.svg";
+import digitalmarketing from "../assets/services/digital.svg";
+import uiux from "../assets/services/design.svg";
+
 
 const servicesData: ServiceItem[] = [
   {
     id: 1,
     title: "Web Development",
-    description: "Custom websites and web applications built with modern technologies and frameworks. We deliver responsive, high-performance solutions.",
+    description:
+      "Custom websites and web applications built with modern technologies and frameworks. We deliver responsive, high-performance solutions.",
     image: webdevices,
-    delay: 0.1
+    delay: 0.1,
   },
   {
     id: 2,
     title: "Mobile Development",
-    description: "Native and cross-platform mobile applications for iOS and Android. We create intuitive and engaging mobile experiences.",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android. We create intuitive and engaging mobile experiences.",
     image: mobiledev,
-    delay: 0.2
+    delay: 0.2,
   },
   {
     id: 3,
     title: "ERP Implementation",
-    description: "Enterprise Resource Planning solutions customized for your business needs. Streamline operations and increase efficiency.",
-    image: "https://pixabay.com/get/gaf1a594296a664916da96f0b699413584f3c90a6164d23542ceab307b518fd7318ccfeec715358d2eb61ba8b6b143c4be424b551ca589210b358613dc0de1e3a_1280.jpg",
-    delay: 0.3
-  }
-];
-
-const featureData = [
-  {
-    id: 1,
-    title: "Full-Spectrum Expertise",
-    description: "Our team excels across the entire development lifecycle, from initial concept to deployment and ongoing maintenance. We handle everything so you don't have to.",
-    delay: 0.4
-  },
-  {
-    id: 2,
-    title: "Solutions Tailored to You",
-    description: "We don't believe in one-size-fits-all approaches. Each solution we create is carefully crafted to address your specific challenges and business requirements.",
-    delay: 0.5
-  },
-  {
-    id: 3,
-    title: "Long-Term Support & Scalability",
-    description: "We build with the future in mind, ensuring your digital solutions can grow and evolve alongside your business. Our support doesn't end at launch.",
-    delay: 0.6
+    description:
+      "Enterprise Resource Planning solutions customized for your business needs. Streamline operations and increase efficiency.",
+    image: erp,
+    delay: 0.3,
   },
   {
     id: 4,
-    title: "Driven by Passion, Backed by Skill",
-    description: "Our team of dedicated professionals is passionate about technology and committed to excellence. We combine creativity with technical prowess to deliver outstanding results.",
-    delay: 0.7
-  }
+    title: "Digital Marketing",
+    description:
+      "Comprehensive digital marketing strategies to enhance your online presence. From SEO to social media, we cover it all.",
+    image: digitalmarketing,
+    delay: 0.4,
+  },
+  {
+    id: 5,
+    title: "UI/UX Design",
+    description:
+      "User-centered design services that focus on creating intuitive and engaging interfaces. We prioritize user experience in every project.",
+    image: uiux,
+    delay: 0.5,
+  },
 ];
 
 const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  const sliderRef = useRef<HTMLDivElement>(null);
+  let scrollAmount = 0;
+  let direction = 1;
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (!slider) return;
+
+    let isHovered = false;
+
+    const handleMouseEnter = () => (isHovered = true);
+    const handleMouseLeave = () => (isHovered = false);
+    const handleTouchStart = () => (isHovered = true);
+    const handleTouchEnd = () => (isHovered = false);
+
+    slider.addEventListener("mouseenter", handleMouseEnter);
+    slider.addEventListener("mouseleave", handleMouseLeave);
+    slider.addEventListener("touchstart", handleTouchStart);
+    slider.addEventListener("touchend", handleTouchEnd);
+
+    const interval = setInterval(() => {
+      if (isHovered || !slider) return;
+
+      const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+      scrollAmount += direction;
+
+      if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+        direction *= -1;
+      }
+
+      slider.scrollTo({
+        left: scrollAmount,
+      });
+    }, 20); // Adjust speed
+
+    return () => {
+      clearInterval(interval);
+      slider.removeEventListener("mouseenter", handleMouseEnter);
+      slider.removeEventListener("mouseleave", handleMouseLeave);
+      slider.removeEventListener("touchstart", handleTouchStart);
+      slider.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, []);
 
   return (
     <section id="services" className="py-20 relative">
@@ -73,7 +113,7 @@ const Services = () => {
           animate={isInView ? "show" : "hidden"}
           className="flex flex-col gap-16"
         >
-          <motion.div 
+          <motion.div
             variants={fadeIn("up", "tween", 0.1, 1)}
             className="text-center"
           >
@@ -85,22 +125,12 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            ref={sliderRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar py-2 px-1"
+          >
             {servicesData.map((service) => (
               <ServiceCard key={service.id} service={service} />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featureData.map((feature) => (
-              <motion.div
-                key={feature.id}
-                variants={fadeIn("up", "tween", feature.delay, 0.8)}
-                className="glass-card rounded-2xl p-8"
-              >
-                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -113,24 +143,15 @@ const ServiceCard = ({ service }: { service: ServiceItem }) => {
   return (
     <motion.div
       variants={fadeIn("up", "tween", service.delay, 0.8)}
-      className="glass-card rounded-2xl p-8 h-full flex flex-col"
+      className="glass-card min-w-[300px] md:min-w-[350px] rounded-2xl p-8 h-full flex flex-col"
     >
       <img
         src={service.image}
         alt={service.title}
         className="rounded-xl mb-6 w-full h-48 object-contain"
       />
-
       <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
       <p className="text-gray-300 mb-4 flex-grow">{service.description}</p>
-      {/* <motion.a
-        href="#"
-        whileHover={{ x: 5 }}
-        className="inline-flex items-center text-[#FF6B81] hover:text-[#FF3366] transition-colors font-medium"
-      >
-        Learn More
-        <ArrowRight className="h-5 w-5 ml-1" />
-      </motion.a> */}
     </motion.div>
   );
 };

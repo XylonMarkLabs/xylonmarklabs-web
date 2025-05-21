@@ -198,12 +198,12 @@ const ContactPage = () => {
                 variants={fadeIn("right", "tween", 0.3, 1)}
                 className="space-y-6"
               >
-                <ContactDetail
+                {/* <ContactDetail
                   icon={<MapPin size={20} className="text-white" />}
                   title="Our Office"
                   detail="123 Tech Boulevard, Innovation District"
                   detail2="San Francisco, CA 94105, USA"
-                />
+                /> */}
                 
                 <ContactDetail
                   icon={<Phone size={20} className="text-white" />}
@@ -217,12 +217,12 @@ const ContactPage = () => {
                   detail="contact@xylonmarkslabs.com"
                 />
                 
-                <ContactDetail
+                {/* <ContactDetail
                   icon={<Clock size={20} className="text-white" />}
                   title="Business Hours"
                   detail="Monday - Friday: 9:00 AM - 6:00 PM"
                   detail2="Saturday - Sunday: Closed"
-                />
+                /> */}
               </motion.div>
 
               <motion.div
@@ -374,98 +374,7 @@ const ContactPage = () => {
             </motion.div>
           </div>
 
-          {/* Map Section */}
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-            className="mb-20"
-          >
-            <motion.h2
-              variants={fadeIn("up", "tween", 0.2, 1)}
-              className="text-2xl font-bold text-center mb-8"
-            >
-              Our Location
-            </motion.h2>
-
-            <motion.div
-              variants={fadeIn("up", "tween", 0.4, 1)}
-              className="glass-card rounded-2xl p-2 h-[400px] overflow-hidden"
-            >
-              {/* Interactive SVG Map */}
-              <div className="w-full h-full relative">
-                <svg 
-                  viewBox="0 0 1000 400" 
-                  width="100%" 
-                  height="100%" 
-                  className="bg-slate-100 dark:bg-slate-800 rounded-xl"
-                >
-                  <defs>
-                    <linearGradient id="road-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#999" stopOpacity="0.8" />
-                      <stop offset="100%" stopColor="#777" stopOpacity="0.8" />
-                    </linearGradient>
-                    <linearGradient id="water-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#78a4fa" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#4c80f0" stopOpacity="0.6" />
-                    </linearGradient>
-                    <linearGradient id="park-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#90d27a" stopOpacity="0.6" />
-                      <stop offset="100%" stopColor="#68b346" stopOpacity="0.6" />
-                    </linearGradient>
-                    <filter id="marker-glow">
-                      <feGaussianBlur stdDeviation="5" result="blur" />
-                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                  </defs>
-                  
-                  {/* Background Grid */}
-                  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(150,150,150,0.1)" strokeWidth="1" />
-                  </pattern>
-                  <rect width="100%" height="100%" fill="url(#grid)" />
-                  
-                  {/* Map Features */}
-                  {/* Water */}
-                  <path d="M 0,150 C 100,130 250,180 400,130 S 700,120 1000,180 V 400 H 0 Z" fill="url(#water-gradient)" />
-                  
-                  {/* Land */}
-                  <path d="M 0,170 C 100,150 250,200 400,150 S 700,140 1000,200 V 400 H 0 Z" fill="#f0f0f0" className="dark:fill-slate-700" />
-                  
-                  {/* Parks */}
-                  <circle cx="200" cy="280" r="50" fill="url(#park-gradient)" />
-                  <circle cx="700" cy="320" r="70" fill="url(#park-gradient)" />
-                  
-                  {/* Roads */}
-                  <path d="M 0,250 H 1000" stroke="url(#road-gradient)" strokeWidth="12" />
-                  <path d="M 0,300 H 1000" stroke="url(#road-gradient)" strokeWidth="8" />
-                  <path d="M 0,350 H 1000" stroke="url(#road-gradient)" strokeWidth="6" />
-                  <path d="M 200,180 V 400" stroke="url(#road-gradient)" strokeWidth="10" />
-                  <path d="M 500,150 V 400" stroke="url(#road-gradient)" strokeWidth="12" />
-                  <path d="M 800,200 V 400" stroke="url(#road-gradient)" strokeWidth="8" />
-                  
-                  {/* Office Location Marker */}
-                  <motion.g
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    filter="url(#marker-glow)"
-                  >
-                    <circle cx="500" cy="250" r="15" fill="#FF3366" />
-                    <circle cx="500" cy="250" r="7" fill="#fff" />
-                    <text x="530" y="255" fill="currentColor" className="text-slate-900 dark:text-white font-bold">XylonMark Labs HQ</text>
-                  </motion.g>
-                  
-                  {/* Buildings */}
-                  <rect x="450" y="220" width="40" height="30" fill="#ccc" className="dark:fill-slate-600" stroke="#999" strokeWidth="1" />
-                  <rect x="520" y="230" width="60" height="40" fill="#ddd" className="dark:fill-slate-600" stroke="#999" strokeWidth="1" />
-                  <rect x="420" y="280" width="50" height="35" fill="#ccc" className="dark:fill-slate-600" stroke="#999" strokeWidth="1" />
-                  <rect x="600" y="260" width="45" height="50" fill="#ddd" className="dark:fill-slate-600" stroke="#999" strokeWidth="1" />
-                </svg>
-              </div>
-            </motion.div>
-          </motion.div>
+          
 
           {/* FAQ Section */}
           <motion.div
