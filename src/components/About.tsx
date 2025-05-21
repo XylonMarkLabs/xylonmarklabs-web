@@ -96,7 +96,7 @@ const About = () => {
 
             <motion.div
               variants={fadeIn("left", "tween", 0.4, 1)}
-              className="relative h-[300px]"
+              className="relative h-[300px] hidden md:block"
             >
               <div className="w-full h-full relative">
                 {/* 3D Interactive Visual for About Section */}
@@ -247,7 +247,7 @@ const About = () => {
 
 
                     {/* Floating 3D elements */}
-                    <motion.div
+                    {/* <motion.div
                       className="absolute top-10 left-[15%]"
                       animate={{
                         y: [0, -10, 0],
@@ -260,9 +260,9 @@ const About = () => {
                       }}
                     >
                       <AnimatedCube size="40px" color="#FF3366" opacity={0.7} position={{}} />
-                    </motion.div>
+                    </motion.div> */}
 
-                    <motion.div
+                    {/* <motion.div
                       className="absolute bottom-10 right-[15%]"
                       animate={{
                         y: [0, 10, 0],
@@ -276,7 +276,7 @@ const About = () => {
                       }}
                     >
                       <AnimatedSphere size="40px" color="#A32929" opacity={0.7} position={{}} />
-                    </motion.div>
+                    </motion.div> */}
                   </div>
                 </div>
               </div>
