@@ -4,6 +4,8 @@ import { Check } from "lucide-react";
 import { fadeIn, staggerContainer } from "../lib/animation";
 import SectionWrapper from "./ui/section-wrapper";
 
+import undraw_my_answer from "../assets/images/undraw_my-answer.svg";
+
 const reasons = [
   {
     id: 1,
@@ -80,9 +82,9 @@ const WhyChooseUs = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80"
-                alt="Professional tech team working together"
-                className="rounded-xl w-full h-auto shadow-xl"
+                src={undraw_my_answer}
+                alt="Why Choose Us"
+             
               />
             </motion.div>
           </div>

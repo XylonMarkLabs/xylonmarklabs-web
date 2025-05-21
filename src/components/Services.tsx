@@ -5,19 +5,22 @@ import { fadeIn, staggerContainer } from "../lib/animation";
 import SectionWrapper from "./ui/section-wrapper";
 import { ServiceItem } from "../lib/types";
 
+import webdevices from "../assets/services/web-devices.svg";
+import mobiledev from "../assets/services/mobile-dev.svg";
+
 const servicesData: ServiceItem[] = [
   {
     id: 1,
     title: "Web Development",
     description: "Custom websites and web applications built with modern technologies and frameworks. We deliver responsive, high-performance solutions.",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=333&q=80",
+    image: webdevices,
     delay: 0.1
   },
   {
     id: 2,
     title: "Mobile Development",
     description: "Native and cross-platform mobile applications for iOS and Android. We create intuitive and engaging mobile experiences.",
-    image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=333&q=80",
+    image: mobiledev,
     delay: 0.2
   },
   {
@@ -115,19 +118,19 @@ const ServiceCard = ({ service }: { service: ServiceItem }) => {
       <img
         src={service.image}
         alt={service.title}
-        className="rounded-xl mb-6 w-full h-48 object-cover"
+        className="rounded-xl mb-6 w-full h-48 object-contain"
       />
 
       <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
       <p className="text-gray-300 mb-4 flex-grow">{service.description}</p>
-      <motion.a
+      {/* <motion.a
         href="#"
         whileHover={{ x: 5 }}
         className="inline-flex items-center text-[#FF6B81] hover:text-[#FF3366] transition-colors font-medium"
       >
         Learn More
         <ArrowRight className="h-5 w-5 ml-1" />
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   );
 };
