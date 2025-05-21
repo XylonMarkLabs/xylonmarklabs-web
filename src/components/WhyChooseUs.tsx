@@ -70,7 +70,7 @@ const WhyChooseUs = () => {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-xl font-semibold mb-1">{reason.title}</h3>
-                      <p className="text-gray-300">{reason.description}</p>
+                      <p className="text-[#4a4a4a] dark:text-gray-300">{reason.description}</p>
                     </div>
                   </motion.div>
                 ))}

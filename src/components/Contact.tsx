@@ -71,9 +71,9 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Get in <span className="accent-text">Touch</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-8">Let's Build Something Powerful Together.</p>
+            <p className="text-[#4a4a4a] dark:text-gray-300 text-lg mb-8">Let's Build Something Powerful Together.</p>
 
-            <p className="text-gray-300 mb-8">
+            <p className="text-[#4a4a4a] dark:text-gray-300 mb-8">
               Whether you're ready to start a project, have questions about our services, or need a consultation on your digital strategy, we're here to help.
             </p>
 
@@ -84,14 +84,14 @@ const Contact = () => {
                   <div className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center mr-4">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-gray-300">+123 456 7890</span>
+                  <span className="text-[#4a4a4a] dark:text-gray-300">+123 456 7890</span>
                 </div>
 
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center mr-4">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-gray-300">contact@xylonmarkslabs.com</span>
+                  <span className="text-[#4a4a4a] dark:text-gray-300">contact@xylonmarkslabs.com</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-300">Name</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[#4a4a4a] dark:text-gray-300">Name</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Your name"
@@ -128,7 +128,7 @@ const Contact = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-300">Email</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[#4a4a4a] dark:text-gray-300">Email</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Your email"
@@ -146,7 +146,7 @@ const Contact = () => {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-300">Subject</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[#4a4a4a] dark:text-gray-300">Subject</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="Subject of your message"
@@ -164,7 +164,7 @@ const Contact = () => {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-sm font-medium text-gray-300">Message</FormLabel>
+                      <FormLabel className="text-sm font-medium text-[#4a4a4a] dark:text-gray-300">Message</FormLabel>
                       <FormControl>
                         <Textarea
                           rows={5}

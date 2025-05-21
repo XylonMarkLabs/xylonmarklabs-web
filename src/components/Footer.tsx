@@ -13,7 +13,7 @@ const Footer = () => {
                 <span className="text-white font-light text-xl">Labs</span>
               </div>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-[#4a4a4a] dark:text-gray-300 mb-6 max-w-md">
               Transforming ideas into exceptional digital experiences. We build custom software solutions that drive growth and innovation.
             </p>
             <div className="flex space-x-4">
@@ -52,17 +52,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/" className="text-[#4a4a4a] dark:text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/about" className="text-[#4a4a4a] dark:text-gray-300 hover:text-[#FF6B81] transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/services" className="text-[#4a4a4a] dark:text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Services
                 </a>
               </li>
@@ -72,7 +72,7 @@ const Footer = () => {
                 </a>
               </li> */}
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-[#FF6B81] transition-colors">
+                <a href="/contact" className="text-[#4a4a4a] dark:text-gray-300 hover:text-[#FF6B81] transition-colors">
                   Contact
                 </a>
               </li>

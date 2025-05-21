@@ -336,7 +336,7 @@ const AboutPage = () => {
             <motion.a
               variants={fadeIn("up", "tween", 0.6, 1)}
               href="/contact"
-              className="inline-block accent-gradient px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg"
+              className="inline-block accent-gradient px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg text-white"
             >
               Get in Touch
             </motion.a>
