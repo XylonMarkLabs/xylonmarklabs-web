@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export const AnimatedSVG = () => {
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none -z-10">
+    <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none -z-10 hidden md:block">
       <svg
         width="100%"
         height="100%"

@@ -5,13 +5,13 @@ import { Code, Server, Database, Globe, Cpu, ShieldCheck, MonitorSmartphone, Clo
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen relative flex items-center pt-24 pb-16">
+    <section id="home" className="md:min-h-screen  relative flex items-center pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="show"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-center"
         >
           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -23,12 +23,12 @@ const Hero = () => {
               At XylonMark Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4 w-full">
+            <div className="mt-10 flex lg:flex-row md:flex-col  gap-4 w-full ">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="accent-gradient text-white text-center px-8 py-3 w-1/3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
+                className="accent-gradient text-white text-center px-8 py-3 w-full sm:w-1/2 md:w-full lg:w-1/2 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg inline-block"
               >
                 Contact Us
               </motion.a>
@@ -36,7 +36,7 @@ const Hero = () => {
                 href="/services"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent border dark:border-white text-center border-black px-8 py-3 w-1/3 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
+                className="bg-transparent border dark:border-white text-center border-black md:w-full px-8 py-3 w-full sm:w-1/2  lg:w-1/2 rounded-full font-semibold hover:bg-white/10 transition-all inline-block"
               >
                 Explore Services
               </motion.a>
@@ -159,7 +159,7 @@ const Hero = () => {
                   </motion.div>
 
                   <motion.div 
-                    className="absolute top-[23%] left-[27%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute top-[20%] left-[27%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: 20 }}
                     animate={{ y: [0, 5, 0] }}
                     transition={{ 
@@ -195,7 +195,7 @@ const Hero = () => {
                   </motion.div>
                   
                   <motion.div 
-                    className="absolute bottom-[50%] left-[40%] p-3 rounded-full accent-gradient shadow-lg"
+                    className="absolute bottom-[50%] left-[45%] p-3 rounded-full accent-gradient shadow-lg"
                     whileHover={{ scale: 1.2, rotate: -20 }}
                     animate={{ y: [0, -5, 0] }}
                     transition={{ 

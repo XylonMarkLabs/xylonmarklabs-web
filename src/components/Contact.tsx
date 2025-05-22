@@ -65,7 +65,7 @@ const Contact = () => {
           variants={staggerContainer}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start"
+          className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 items-start"
         >
           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

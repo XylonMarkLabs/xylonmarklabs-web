@@ -178,7 +178,7 @@ const ContactPage = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16 mb-20">
             {/* Contact Information */}
             <motion.div
               variants={staggerContainer}
@@ -189,14 +189,14 @@ const ContactPage = () => {
             >
               <motion.h2
                 variants={fadeIn("right", "tween", 0.2, 1)}
-                className="text-2xl font-bold mb-8"
+                className="text-2xl font-bold mb-8 text-center md:text-left"
               >
                 Contact Information
               </motion.h2>
 
               <motion.div
                 variants={fadeIn("right", "tween", 0.3, 1)}
-                className="space-y-6"
+                className="flex justify-center md:justify-normal flex-wrap gap-8"
               >
                 {/* <ContactDetail
                   icon={<MapPin size={20} className="text-white" />}
@@ -229,8 +229,8 @@ const ContactPage = () => {
                 variants={fadeIn("right", "tween", 0.5, 1)}
                 className="pt-8"
               >
-                <h3 className="text-xl font-bold mb-6">Follow Us</h3>
-                <div className="flex flex-wrap gap-4">
+                <h3 className="text-xl font-bold mb-6 text-center md:text-left">Follow Us</h3>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-normal">
                   {socialMediaLinks.map((social, index) => (
                     <SocialMediaButton
                       key={index}

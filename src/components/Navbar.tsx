@@ -48,8 +48,8 @@ const Navbar = () => {
               <a
                 className={`block px-3 py-1 rounded-full transition-colors duration-200 font-medium ${
                   location === link.href
-                    ? "text-[#ff2d3b] "
-                    : "text-slate-700 dark:text-white hover:underline hover:text-white"
+                    ? "text-[#ff2d3b] text-lg "
+                    : "text-slate-700 dark:text-white hover:underline hover:underline-offset-8 hover:text-[#ff2d3b] dark:hover:text-[#ff2d3b]"
                 }`}
               >
                 {link.label}
@@ -89,8 +89,8 @@ const Navbar = () => {
                   onClick={closeMenu}
                   className={`block px-2 py-1 my-1 rounded-full transition-colors font-medium ${
                     location === link.href
-                      ? "bg-[#82181a] text-white text-center"
-                      : "text-slate-700 dark:text-white hover:bg-[#9f0712] hover:shadow-lg hover:text-white text-center"
+                      ? "text-[#ff2d3b] text-lg "
+                    : "text-slate-700 dark:text-white hover:underline hover:underline-offset-8 hover:text-[#ff2d3b] dark:hover:text-[#ff2d3b]"
                   }`}
                 >
                   {link.label}
