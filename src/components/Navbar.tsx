@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter"; // import useLocation
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeSwitch from "./ui/theme-switch";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/nav-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
