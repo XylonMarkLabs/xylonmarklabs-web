@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../lib/animation";
 import Footer from "../components/Footer";
 import { Badge } from "../components/ui/badge";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Globe, Smartphone, Database, TrendingUp, Palette } from "lucide-react";
 import Navbar from "../components/Navbar";
+import AnimatedSVG from "../components/ui/animated-svg";
+import Shapes3D from "../components/ui/3d-shapes";
 
 import webdevices from "../assets/services/web-devices.svg";
 import mobiledev from "../assets/services/mobile-dev.svg";
@@ -12,12 +14,14 @@ import erp from "../assets/services/erp.svg";
 import digitalmarketing from "../assets/services/digital.svg";
 import uiux from "../assets/services/design.svg";
 
+
 type ServiceDetailProps = {
   title: string;
   description: string;
   technologies: string[];
   benefits: string[];
   imageSrc: string;
+  icon: React.ReactNode;
   reverse?: boolean;
 };
 
@@ -27,6 +31,7 @@ const ServiceDetail = ({
   technologies,
   benefits,
   imageSrc,
+  icon,
   reverse = false,
 }: ServiceDetailProps) => {
   return (
@@ -37,11 +42,18 @@ const ServiceDetail = ({
       viewport={{ once: true, amount: 0.25 }}
       className="py-16"
     >
-      <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+      <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
         reverse ? "lg:flex-row-reverse" : ""
       }`}>
         <motion.div variants={fadeIn(reverse ? "left" : "right", "tween", 0.2, 1)}>
-          <h2 className="text-3xl font-bold mb-6">{title}</h2>
+          <div className="flex items-center mb-6">
+            <div className="flex-shrink-0 mr-4">
+              <div className="h-12 w-12 rounded-lg accent-gradient flex items-center justify-center">
+                {icon}
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold">{title}</h2>
+          </div>
           <p className="text-slate-700 dark:text-gray-300 mb-8">{description}</p>
 
           <div className="mb-8">
@@ -99,7 +111,8 @@ const ServicesPage = () => {
         "Secure and scalable architecture",
         "Integration with third-party services and APIs"
       ],
-      imageSrc: webdevices
+      imageSrc: webdevices,
+      icon: <Globe className="h-6 w-6 text-white" />
     },
     {
       title: "Mobile App Development",
@@ -113,6 +126,7 @@ const ServicesPage = () => {
         "Performance optimization for various devices"
       ],
       imageSrc: mobiledev,
+      icon: <Smartphone className="h-6 w-6 text-white" />,
       reverse: true
     },
     {
@@ -126,7 +140,8 @@ const ServicesPage = () => {
         "Improved productivity and efficiency",
         "Scalability to accommodate business growth"
       ],
-      imageSrc: erp
+      imageSrc: erp,
+      icon: <Database className="h-6 w-6 text-white" />
     },
     {
       title: "Digital Marketing & Branding",
@@ -140,6 +155,7 @@ const ServicesPage = () => {
         "Ongoing analysis and optimization of marketing efforts"
       ],
       imageSrc: digitalmarketing,
+      icon: <TrendingUp className="h-6 w-6 text-white" />,
       reverse: true
     },
     {
@@ -153,7 +169,8 @@ const ServicesPage = () => {
         "Brand-consistent visual design",
         "Accessibility considerations in design"
       ],
-      imageSrc: uiux
+      imageSrc: uiux,
+      icon: <Palette className="h-6 w-6 text-white" />
     }
   ];
 
@@ -163,7 +180,8 @@ const ServicesPage = () => {
         <title>Our Services - XylonMark Labs</title>
         <meta name="description" content="Explore our comprehensive range of tech services including Web Development, Mobile Apps, ERP Implementation, AI Solutions, and Cloud Services. We use cutting-edge technologies to deliver exceptional solutions." />
       </Helmet>
-
+      {/* <Shapes3D /> */}
+      <AnimatedSVG />
       <Navbar />
 
       <main className="pt-24 pb-16">
@@ -197,6 +215,7 @@ const ServicesPage = () => {
                 technologies={service.technologies}
                 benefits={service.benefits}
                 imageSrc={service.imageSrc}
+                icon={service.icon}
                 reverse={service.reverse}
               />
             ))}
@@ -224,7 +243,7 @@ const ServicesPage = () => {
             <motion.a
               variants={fadeIn("up", "tween", 0.6, 1)}
               href="/contact"
-              className="inline-block accent-gradient px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg"
+              className="inline-block accent-gradient px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity shadow-lg text-white"
             >
               Get in Touch
             </motion.a>

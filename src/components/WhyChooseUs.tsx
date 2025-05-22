@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
 
             <motion.div
               variants={fadeIn("left", "tween", 0.4, 1)}
-              className="relative"
+              className="relative hidden md:block"
             >
               <img
                 src={undraw_my_answer}
