@@ -31,7 +31,7 @@ export const ThemeSwitch = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={toggleTheme}
-      className="rounded-full p-2 bg-slate-800/50 dark:bg-white/10 hover:bg-slate-700 dark:hover:bg-white/20 transition-colors"
+      className="rounded-full p-2 bg-[#dfdfdf] dark:bg-white/10 hover:bg-[#a4a4a4] dark:hover:bg-white/20 transition-colors"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (

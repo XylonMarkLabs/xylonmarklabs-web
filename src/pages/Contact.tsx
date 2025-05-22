@@ -402,7 +402,7 @@ const ContactPage = () => {
             >
               <a
                 href="tel:+14155550123"
-                className="inline-flex items-center gap-2 accent-gradient px-16 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 accent-gradient px-16 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity text-slate-50"
               >
                 <Phone size={18} className="text-white" />
                 Call Us

@@ -85,11 +85,11 @@ const About = () => {
                 <span className="block">Labs</span>
               </h2>
 
-              <p className="text-gray-300 mb-6">
+              <p className="text-[#4a4a4a] dark:text-gray-300 mb-6">
                 At XylonMark Labs, we harness the power of technology to build solutions that aren't just functional but exceptional. Our expert team combines technical proficiency with creative thinking to develop software that addresses real-world challenges. We approach every project with a deep commitment to quality, innovation, and client satisfaction.
               </p>
 
-              <p className="text-gray-300">
+              <p className="text-[#4a4a4a] dark:text-gray-300">
                 Our expertise spans across web and mobile app development, custom software engineering, and enterprise solutions. We're passionate about creating digital products that go beyond expectations and deliver tangible value.
               </p>
             </motion.div>

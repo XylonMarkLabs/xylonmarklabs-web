@@ -120,7 +120,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Main <span className="accent-text">Services</span>
             </h2>
-            <p className="text-gray-300 text-xl max-w-3xl mx-auto">
+            <p className="text-[#4a4a4a] dark:text-gray-300 text-xl max-w-3xl mx-auto">
               Smart Solutions Which Made Just for You.
             </p>
           </motion.div>
@@ -151,7 +151,7 @@ const ServiceCard = ({ service }: { service: ServiceItem }) => {
         className="rounded-xl mb-6 w-full h-48 object-contain"
       />
       <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-      <p className="text-gray-300 mb-4 flex-grow">{service.description}</p>
+      <p className="text-[#4a4a4a] dark:text-gray-300 mb-4 flex-grow">{service.description}</p>
     </motion.div>
   );
 };

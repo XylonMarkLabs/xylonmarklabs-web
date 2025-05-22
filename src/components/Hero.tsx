@@ -19,7 +19,7 @@ const Hero = () => {
               <span className="block mt-3">We Build What Your Business Needs.</span>
             </h1>
 
-            <p className="mt-6 text-gray-300 text-lg md:text-xl max-w-xl">
+            <p className="mt-6  text-lg md:text-xl max-w-xl text-[#4a4a4a] dark:text-gray-300">
               At XylonMark Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
             </p>
 
