@@ -12,6 +12,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { useToast } from "../hooks/use-toast";
 import { apiRequest } from "../lib/queryClient";
+import emailjs from "@emailjs/browser";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -27,6 +28,10 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const { toast } = useToast();
 
+  const SERVICE_ID = "service_5glvzze";
+  const TEMPLATE_ID = "template_pxfwyij";
+  const PUBLIC_KEY = "L-cJZJDBKZw-W-Ixf";
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,14 +44,19 @@ const Contact = () => {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      await apiRequest("POST", "/api/contact", data);
-      
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message
+      }, PUBLIC_KEY);
+
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
         variant: "default",
       });
-      
+
       form.reset();
     } catch (error) {
       toast({
@@ -54,6 +64,7 @@ const Contact = () => {
         description: "There was an error sending your message. Please try again.",
         variant: "destructive",
       });
+      console.error("EmailJS Error:", error);
     }
   };
 
@@ -84,14 +95,14 @@ const Contact = () => {
                   <div className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center mr-4">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-[#4a4a4a] dark:text-gray-300">+123 456 7890</span>
+                  <span className="text-[#4a4a4a] dark:text-gray-300">+94 (76) 677 3980</span>
                 </div>
 
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center mr-4">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-[#4a4a4a] dark:text-gray-300">contact@xylonmarkslabs.com</span>
+                  <span className="text-[#4a4a4a] dark:text-gray-300">xylonmarklabs@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -178,8 +189,8 @@ const Contact = () => {
                   )}
                 />
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   disabled={form.formState.isSubmitting}
                   className="w-full accent-gradient hover:opacity-90 transition-opacity rounded-lg"
                 >

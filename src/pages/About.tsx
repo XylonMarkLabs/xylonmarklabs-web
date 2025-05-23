@@ -199,9 +199,9 @@ const AboutPage = () => {
             viewport={{ once: true, amount: 0.25 }}
             className="glass-card rounded-3xl p-8 md:p-12 mb-20"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="grid gap-10 items-center">
               <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
-                <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
                 <div className="space-y-4 text-slate-700 dark:text-gray-300">
                   <p>
                     Founded in 2018, XylonMark Labs began with a simple mission: to help businesses leverage technology to achieve their full potential. What started as a small team of developers has grown into a full-service tech company with expertise across multiple domains.
@@ -215,7 +215,7 @@ const AboutPage = () => {
                 </div>
               </motion.div>
 
-              <motion.div
+              {/* <motion.div
                 variants={fadeIn("left", "tween", 0.4, 1)}
                 className="relative h-[400px] flex items-center justify-center"
               >
@@ -232,22 +232,22 @@ const AboutPage = () => {
                     </linearGradient>
                   </defs>
                   
-                  {/* Timeline */}
+                  Timeline
                   <line x1="200" y1="50" x2="200" y2="350" stroke="url(#timeline-gradient)" strokeWidth="4" />
                   
-                  {/* Timeline nodes */}
+                  Timeline nodes
                   <circle cx="200" cy="80" r="12" fill="url(#timeline-gradient)" />
                   <circle cx="200" cy="160" r="12" fill="url(#timeline-gradient)" />
                   <circle cx="200" cy="240" r="12" fill="url(#timeline-gradient)" />
                   <circle cx="200" cy="320" r="12" fill="url(#timeline-gradient)" />
                   
-                  {/* Timeline events */}
+                  Timeline events
                   <text x="220" y="85" fill="currentColor" className="text-slate-700 dark:text-gray-300 text-sm font-bold">2018: Founded</text>
                   <text x="70" y="165" fill="currentColor" className="text-slate-700 dark:text-gray-300 text-sm font-bold" textAnchor="end">2020: Expanded Services</text>
                   <text x="220" y="245" fill="currentColor" className="text-slate-700 dark:text-gray-300 text-sm font-bold">2022: Global Reach</text>
                   <text x="70" y="325" fill="currentColor" className="text-slate-700 dark:text-gray-300 text-sm font-bold" textAnchor="end">2024: AI Innovation</text>
                 </svg>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
 
