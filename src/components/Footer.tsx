@@ -20,28 +20,28 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61575218201327"
                 className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center hover:scale-110 hover:opacity-90 transition-opacity"
                 aria-label="Facebook"
               >
                 <Facebook size={18} className="text-white" />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center hover:scale-110 hover:opacity-90 transition-opacity"
                 aria-label="Twitter"
               >
                 <Twitter size={18} className="text-white" />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/xylonmarklabs_?igsh=MTI1ejV5bGF0OXc5dA=="
                 className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center hover:scale-110 hover:opacity-90 transition-opacity"
                 aria-label="Instagram"
               >
                 <Instagram size={18} className="text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/xylonmark-labs"
                 className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center hover:scale-110 hover:opacity-90 transition-opacity"
                 aria-label="LinkedIn"
               >
