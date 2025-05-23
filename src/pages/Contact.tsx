@@ -27,6 +27,7 @@ import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { useToast } from "../hooks/use-toast";
 import { apiRequest } from "../lib/queryClient";
+import emailjs from "@emailjs/browser";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -37,14 +38,14 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-const SocialMediaButton = ({ 
-  icon, 
-  href, 
-  label, 
-  color = "accent-gradient" 
-}: { 
-  icon: React.ReactNode; 
-  href: string; 
+const SocialMediaButton = ({
+  icon,
+  href,
+  label,
+  color = "accent-gradient"
+}: {
+  icon: React.ReactNode;
+  href: string;
   label: string;
   color?: string;
 }) => {
@@ -63,15 +64,15 @@ const SocialMediaButton = ({
   );
 };
 
-const ContactDetail = ({ 
-  icon, 
-  title, 
+const ContactDetail = ({
+  icon,
+  title,
   detail,
   detail2,
   link = false
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
+}: {
+  icon: React.ReactNode;
+  title: string;
   detail: string;
   detail2?: string;
   link?: boolean;
@@ -103,6 +104,10 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  const SERVICE_ID = "service_5glvzze";
+  const TEMPLATE_ID = "template_pxfwyij";
+  const PUBLIC_KEY = "L-cJZJDBKZw-W-Ixf";
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -116,34 +121,40 @@ const ContactPage = () => {
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      await apiRequest("POST", "/api/contact", data);
-      
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject,
+        message: data.message
+      }, PUBLIC_KEY);
+
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
         variant: "default",
       });
-      
+
       setSubmitted(true);
       form.reset();
     } catch (error) {
       toast({
         title: "Error sending message",
-        description: "There was a problem sending your message. Please try again later.",
+        description: "There was an error sending your message. Please try again.",
         variant: "destructive",
       });
+      console.error("EmailJS Error:", error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const socialMediaLinks = [
-    { icon: <Facebook size={18} className="text-white" />, href: "https://facebook.com/xylonmarkslabs", label: "Facebook" },
-    { icon: <Twitter size={18} className="text-white" />, href: "https://twitter.com/xylonmarkslabs", label: "Twitter" },
-    { icon: <Instagram size={18} className="text-white" />, href: "https://instagram.com/xylonmarkslabs", label: "Instagram" },
-    { icon: <Linkedin size={18} className="text-white" />, href: "https://linkedin.com/company/xylonmarkslabs", label: "LinkedIn" },
-    { icon: <Github size={18} className="text-white" />, href: "https://github.com/xylonmarkslabs", label: "GitHub" },
-    { icon: <Youtube size={18} className="text-white" />, href: "https://youtube.com/xylonmarkslabs", label: "YouTube" },
+    { icon: <Facebook size={18} className="text-white" />, href: "https://www.facebook.com/profile.php?id=61575218201327", label: "Facebook" },
+    // { icon: <Twitter size={18} className="text-white" />, href: "https://twitter.com/xylonmarkslabs", label: "Twitter" },
+    { icon: <Instagram size={18} className="text-white" />, href: "https://www.instagram.com/xylonmarklabs_?igsh=MTI1ejV5bGF0OXc5dA==", label: "Instagram" },
+    { icon: <Linkedin size={18} className="text-white" />, href: "https://www.linkedin.com/company/xylonmark-labs", label: "LinkedIn" },
+    // { icon: <Github size={18} className="text-white" />, href: "https://github.com/xylonmarkslabs", label: "GitHub" },
+    // { icon: <Youtube size={18} className="text-white" />, href: "https://youtube.com/xylonmarkslabs", label: "YouTube" },
   ];
 
   return (
@@ -204,19 +215,19 @@ const ContactPage = () => {
                   detail="123 Tech Boulevard, Innovation District"
                   detail2="San Francisco, CA 94105, USA"
                 /> */}
-                
+
                 <ContactDetail
                   icon={<Phone size={20} className="text-white" />}
                   title="Phone"
-                  detail="+1 (415) 555-0123"
+                  detail="+94 (76) 677 3980"
                 />
-                
+
                 <ContactDetail
                   icon={<Mail size={20} className="text-white" />}
                   title="Email"
-                  detail="contact@xylonmarkslabs.com"
+                  detail="contact@xylonmarklabs.com"
                 />
-                
+
                 {/* <ContactDetail
                   icon={<Clock size={20} className="text-white" />}
                   title="Business Hours"
@@ -255,7 +266,7 @@ const ContactPage = () => {
                 className="glass-card rounded-2xl p-8"
               >
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                
+
                 {submitted ? (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -269,7 +280,7 @@ const ContactPage = () => {
                     <p className="text-slate-700 dark:text-gray-300 mb-6">
                       Thank you for contacting us. We'll get back to you as soon as possible.
                     </p>
-                    <Button 
+                    <Button
                       onClick={() => setSubmitted(false)}
                       className="accent-gradient hover:opacity-90 transition-opacity rounded-lg"
                     >
@@ -353,8 +364,8 @@ const ContactPage = () => {
                         )}
                       />
 
-                      <Button 
-                        type="submit" 
+                      <Button
+                        type="submit"
                         disabled={isSubmitting}
                         className="w-full accent-gradient hover:opacity-90 transition-opacity rounded-lg"
                       >
@@ -374,7 +385,7 @@ const ContactPage = () => {
             </motion.div>
           </div>
 
-          
+
 
           {/* FAQ Section */}
           <motion.div
