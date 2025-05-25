@@ -201,16 +201,13 @@ const AboutPage = () => {
           >
             <div className="grid gap-10 items-center">
               <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
-                <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
-                <div className="space-y-4 text-slate-700 dark:text-gray-300">
+                <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
+                <div className="space-y-4 text-lg text-justify text-slate-700 dark:text-gray-300">
                   <p>
-                    Founded in 2018, XylonMark Labs began with a simple mission: to help businesses leverage technology to achieve their full potential. What started as a small team of developers has grown into a full-service tech company with expertise across multiple domains.
+                    Introducing XylonMark Labs, a place where innovation meets reliability and creativity drives progress. We are a passionate team dedicated to providing top-quality solutions that make everyday tasks easier, faster, and smarter. Our journey began with a simple goal: to solve real problems through technology and creativity. Since then, we've grown into a trusted name, known for our unwavering commitment to excellence, customer satisfaction, and continuous improvement.
                   </p>
                   <p>
-                    Our journey has been defined by a commitment to innovation, quality, and client satisfaction. We've worked with companies of all sizes, from startups to enterprises, delivering solutions that drive growth and create competitive advantages.
-                  </p>
-                  <p>
-                    Today, we're proud to be at the forefront of technological innovation, continuously expanding our capabilities and embracing emerging technologies to provide our clients with cutting-edge solutions that address their unique challenges.
+                    Whether you're here to explore new possibilities, collaborate on exciting projects, or grow alongside us, we're truly glad to have you on board. Together, we can push the boundaries of innovation, create meaningful impact, and build a brighter, smarter digital future that empowers businesses and communities alike. We look forward to forging strong partnerships, sharing knowledge, and achieving success hand in hand with you.
                   </p>
                 </div>
               </motion.div>

@@ -103,7 +103,7 @@ const ServicesPage = () => {
     {
       title: "Web Development",
       description: "We build custom web applications that are scalable, responsive, and user-friendly. Our web development solutions are designed to provide excellent user experiences while ensuring high performance and security. From simple corporate websites to complex web applications, our team of skilled developers will bring your vision to life.",
-      technologies: ["React", "Next.js", "Node.js", "Express","Spring Boot", "MongoDB", "PostgreSQL", "GraphQL", "Tailwind CSS", "AWS", "Firebase"],
+      technologies: [],
       benefits: [
         "Responsive design that works on all devices",
         "Search engine optimized codebase",
@@ -117,7 +117,7 @@ const ServicesPage = () => {
     {
       title: "Mobile App Development",
       description: "Our mobile app development services cover both iOS and Android platforms, allowing you to reach a wider audience. We focus on creating intuitive, feature-rich mobile applications that provide value to your users while aligning with your business goals. Our development process ensures your app is not only functional but also maintainable and future-proof.",
-      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Redux", "GraphQL", "REST APIs", "OAuth"],
+      technologies: [],
       benefits: [
         "Cross-platform compatibility",
         "Intuitive user interface and experience",
@@ -132,7 +132,7 @@ const ServicesPage = () => {
     {
       title: "ERP Implementation",
       description: "Our Enterprise Resource Planning (ERP) implementation services help businesses streamline their operations by integrating various business processes. We work closely with your team to understand your specific requirements, customize the ERP solution accordingly, and ensure smooth implementation with minimal disruption to your operations.",
-      technologies: ["SAP", "Oracle", "Microsoft Dynamics", "Odoo", "NetSuite", "API Integration", "Data Migration", "Business Intelligence", "Process Automation"],
+      technologies: [],
       benefits: [
         "Streamlined business processes and workflows",
         "Centralized data management and accessibility",
@@ -146,7 +146,7 @@ const ServicesPage = () => {
     {
       title: "Digital Marketing & Branding",
       description: "We offer comprehensive digital marketing and branding services to help you establish a strong online presence. From SEO and content marketing to social media management and PPC advertising, our team will work with you to create a tailored strategy that aligns with your business goals and drives results.",
-      technologies: ["SEO", "PPC", "Social Media", "Content Marketing", "Email Marketing", "Analytics", "Brand Strategy", "Graphic Design"],
+      technologies: [],
       benefits: [
         "Increased online visibility and brand awareness",
         "Targeted marketing campaigns to reach your audience",
@@ -161,7 +161,7 @@ const ServicesPage = () => {
     {
       title: "UI/UX Design",
       description: "Our UI/UX design services focus on creating user-centered designs that enhance the overall user experience. We conduct thorough research and testing to ensure our designs are not only visually appealing but also functional and intuitive. Our goal is to create designs that engage users and drive conversions.",
-      technologies: ["Figma", "User Research", "Wireframing", "Prototyping", "Usability Testing"],
+      technologies: [],
       benefits: [
         "User-centered design approach",
         "Intuitive navigation and layout",
