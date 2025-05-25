@@ -201,8 +201,8 @@ const AboutPage = () => {
           >
             <div className="grid gap-10 items-center">
               <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
-                <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
-                <div className="space-y-4 text-lg text-justify text-slate-700 dark:text-gray-300">
+                <h2 className="text-3xl font-bold mb-6 text-center">Who <span className="accent-text">We Are</span></h2>
+                <div className="space-y-4 text-base md:text-lg md:text-justify text-slate-700 dark:text-gray-300">
                   <p>
                     Introducing XylonMark Labs, a place where innovation meets reliability and creativity drives progress. We are a passionate team dedicated to providing top-quality solutions that make everyday tasks easier, faster, and smarter. Our journey began with a simple goal: to solve real problems through technology and creativity. Since then, we've grown into a trusted name, known for our unwavering commitment to excellence, customer satisfaction, and continuous improvement.
                   </p>
