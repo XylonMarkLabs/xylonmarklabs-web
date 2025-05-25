@@ -207,7 +207,7 @@ const ContactPage = () => {
 
               <motion.div
                 variants={fadeIn("right", "tween", 0.3, 1)}
-                className="flex justify-center md:justify-normal flex-wrap gap-8"
+                className="flex md:justify-normal flex-wrap gap-8"
               >
                 {/* <ContactDetail
                   icon={<MapPin size={20} className="text-white" />}

@@ -6,19 +6,19 @@ const Footer = () => {
   return (
     <footer className="py-12 glass">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-cente">
-          <div className="md:col-span-2 flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-10 items-center text-center md:text-left">
+          <div className="md:col-span-2 flex flex-col items-center md:items-start">
             <Link href="/">
-              <div className="flex items-center space-x-2 mb-4 cursor-pointer">
+              <div className="flex items-center space-x-2 mb-4 cursor-pointer justify-center md:justify-start">
                 <img src={logo} alt="logo" className="w-60" />
               </div>
             </Link>
           </div>
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <p className="text-[#4a4a4a] dark:text-gray-300 mb-6 max-w-md">
               Transforming ideas into exceptional digital experiences. We build custom software solutions that drive growth and innovation.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/profile.php?id=61575218201327"
                 className="w-10 h-10 rounded-full accent-gradient flex items-center justify-center hover:scale-110 hover:opacity-90 transition-opacity"
@@ -49,7 +49,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
+          
           {/* <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
