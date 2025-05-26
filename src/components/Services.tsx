@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { fadeIn, staggerContainer } from "../lib/animation";
 import SectionWrapper from "./ui/section-wrapper";
@@ -9,7 +9,6 @@ import mobiledev from "../assets/services/mobile-dev.svg";
 import erp from "../assets/services/erp.svg";
 import digitalmarketing from "../assets/services/digital.svg";
 import uiux from "../assets/services/design.svg";
-
 
 const servicesData: ServiceItem[] = [
   {
@@ -58,51 +57,6 @@ const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const sliderRef = useRef<HTMLDivElement>(null);
-  let scrollAmount = 0;
-  let direction = 1;
-
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    let isHovered = false;
-
-    const handleMouseEnter = () => (isHovered = true);
-    const handleMouseLeave = () => (isHovered = false);
-    const handleTouchStart = () => (isHovered = true);
-    const handleTouchEnd = () => (isHovered = false);
-
-    slider.addEventListener("mouseenter", handleMouseEnter);
-    slider.addEventListener("mouseleave", handleMouseLeave);
-    slider.addEventListener("touchstart", handleTouchStart);
-    slider.addEventListener("touchend", handleTouchEnd);
-
-    const interval = setInterval(() => {
-      if (isHovered || !slider) return;
-
-      const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-      scrollAmount += direction;
-
-      if (scrollAmount >= maxScroll || scrollAmount <= 0) {
-        direction *= -1;
-      }
-
-      slider.scrollTo({
-        left: scrollAmount,
-      });
-    }, 20); // Adjust speed
-
-    return () => {
-      clearInterval(interval);
-      slider.removeEventListener("mouseenter", handleMouseEnter);
-      slider.removeEventListener("mouseleave", handleMouseLeave);
-      slider.removeEventListener("touchstart", handleTouchStart);
-      slider.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
-
   return (
     <section id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -125,10 +79,7 @@ const Services = () => {
             </p>
           </motion.div>
 
-          <div
-            ref={sliderRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar py-2 px-1"
-          >
+          <div className="flex gap-6 overflow-x-auto no-scrollbar py-2 px-1">
             {servicesData.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -143,7 +94,7 @@ const ServiceCard = ({ service }: { service: ServiceItem }) => {
   return (
     <motion.div
       variants={fadeIn("up", "tween", service.delay, 0.8)}
-      className="glass-card min-w-[300px] md:min-w-[350px] rounded-2xl p-8 h-full flex flex-col"
+      className="glass-card min-w-[300px] md:min-w-[350px] rounded-2xl p-8 h-full flex flex-col "
     >
       <img
         src={service.image}
@@ -151,7 +102,9 @@ const ServiceCard = ({ service }: { service: ServiceItem }) => {
         className="rounded-xl mb-6 w-full h-48 object-contain"
       />
       <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-      <p className="text-[#4a4a4a] dark:text-gray-300 mb-4 flex-grow">{service.description}</p>
+      <p className="text-[#4a4a4a] dark:text-gray-300 mb-4 flex-grow">
+        {service.description}
+      </p>
     </motion.div>
   );
 };

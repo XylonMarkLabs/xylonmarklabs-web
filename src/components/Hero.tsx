@@ -5,7 +5,7 @@ import { Code, Server, Database, Globe, Cpu, ShieldCheck, MonitorSmartphone, Clo
 
 const Hero = () => {
   return (
-    <section id="home" className="md:min-h-screen  relative flex items-center pt-24 pb-16">
+    <section id="home" className="md:min-h-screen  relative flex items-center pt-24 pb-16 ">
       <div className="max-w-7xl mx-auto px-4 md:px-8 w-full">
         <motion.div
           variants={staggerContainer}
@@ -23,7 +23,7 @@ const Hero = () => {
               At XylonMark Labs, we blend technology, creativity, and strategy to build custom software solutions that drive growth. Our goal is to transform your vision into standout digital solutions.
             </p>
 
-            <div className="mt-10 flex lg:flex-row md:flex-col  gap-4 w-full ">
+            <div className="mt-10 flex-col lg:flex-row md:flex-col  gap-4 w-full  sm:gap-4 flex">
               <motion.a
                 href="/contact"
                 whileHover={{ scale: 1.05 }}
