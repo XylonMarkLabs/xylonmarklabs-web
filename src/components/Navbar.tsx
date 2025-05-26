@@ -81,7 +81,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-full right-0 w-1/4 nav-card py-4 px-4 space-y-3 bg-white dark:bg-zinc-900 shadow-lg justify-center rounded-lg"
+            className="md:hidden absolute top-full right-0 w-1/2 nav-card py-6 px-5 space-y-3 bg-white dark:bg-zinc-900 shadow-lg justify-center rounded-lg"
           >
             {navLinks.map((link) => (
               <Link href={link.href} key={link.href}>
