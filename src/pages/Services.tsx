@@ -40,7 +40,7 @@ const ServiceDetail = ({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className="py-16"
+      className="py-16 overflow-hidden"
     >
       <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
         reverse ? "lg:flex-row-reverse" : ""
