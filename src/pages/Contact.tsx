@@ -216,11 +216,11 @@ const ContactPage = () => {
                   detail2="San Francisco, CA 94105, USA"
                 /> */}
 
-                <a href="tel:+94771234567" className="hover:glass-card rounded-2xl px-8 py-4">
+                <a href="tel:+94703777470" className="hover:glass-card rounded-2xl px-8 py-4">
                 <ContactDetail
                   icon={<Phone size={20} className="text-white" />}
                   title="Phone"
-                  detail="+94 (76) 677 3980"
+                  detail="+94 (70) 377 7470"
                 />
                 </a>
 
@@ -416,14 +416,14 @@ const ContactPage = () => {
               className="flex flex-wrap justify-center gap-4"
             >
               <a
-                href="tel:+14155550123"
+                href="tel:+94703777470"
                 className="inline-flex items-center gap-2 accent-gradient px-16 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity text-slate-50"
               >
                 <Phone size={18} className="text-white" />
                 Call Us
               </a>
               <a
-                href="mailto:contact@xylonmarkslabs.com"
+                href="mailto:xylonmarklabs@gmail.com"
                 className="inline-flex items-center gap-2 bg-transparent border border-primary dark:border-white px-16 py-2 rounded-full font-semibold hover:bg-primary/10 transition-colors"
               >
                 <Mail size={18} />
